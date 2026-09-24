@@ -52,11 +52,58 @@
   }
 
   h1 span { color: #2ecca8; }
+
+  .layout {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 0 16px;
+  }
+
+  .topics {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .topics li {
+    position: relative;
+    padding-left: 1.6rem;
+    color: #e2e4f0;
+    font-size: clamp(1.1rem, 2.4vw, 1.6rem);
+    line-height: 1.35;
+  }
+
+  .topics li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background: #2ecca8;
+  }
 </style>
 </head>
 <body>
 
-<h1>Laser Cutting <span>Demo</span></h1>
+<div class="layout">
+  <h1>Laser Cutting <span>Demo</span></h1>
+
+  <ul class="topics">
+    <li>Laser sources / Material compatibility</li>
+    <li>Material selection</li>
+    <li>Operations and Settings</li>
+    <li>Air extraction</li>
+    <li>Framing</li>
+    <li>Why is the shield important</li>
+  </ul>
+</div>
 
 </body>
 </html>
